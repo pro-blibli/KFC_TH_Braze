@@ -755,21 +755,6 @@
             <div class="info-box">
                 <strong>💡 Why This Matters:</strong> Without Data Transformation, marketers would need to manually monitor tier changes in Talon.One, export customer lists, and manually trigger Braze campaigns—creating delays of hours or days. With automated transformation, tier upgrades become instant engagement opportunities. The customer feels recognized in real-time (within seconds, not tomorrow), and the brand captures a high-value moment to drive next purchase with personalized Gold tier offers. Both systems stay perfectly in sync without any manual intervention.
             </div>
-// Output: Braze /users/track event
-
-return {
-  "events": [{
-    "external_id": payload.customer_id,
-    "name": "loyalty_tier_upgraded",
-    "time": new Date().toISOString(),
-    "properties": {
-      "previous_tier": payload.old_tier,
-      "current_tier": payload.new_tier,
-      "new_benefits": payload.benefits.join(", "),
-      "upgrade_trigger": "purchase_threshold"
-    }
-  }]
-};</div>
 
             <!-- Scenario E -->
             <h3 class="section-subtitle">Scenario E: Multivariate Testing</h3>
